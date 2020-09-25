@@ -57,7 +57,7 @@ export default function Skeleton({
   const getChildren = React.useCallback( (element: JSX.Element | JSX.Element[]) => {
     return React.Children.map(element, (child: JSX.Element, index: number) => {
       let style;
-      if (child.type.displayName === "SkeletonPlaceholderItem") {
+      if (child.type.displayName === "SkeletonItem") {
         const { children, ...styles } = child.props;
         style = styles;
       } else {
