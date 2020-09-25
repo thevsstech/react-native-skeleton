@@ -1,5 +1,5 @@
 {
-  "name": "react-native-skeleton-placeholder",
+  "name": "react-native-skeleton",
   "version": "2.0.3",
   "description": "SkeletonPlaceholder is a React Native library to easily create an amazing loading effect.",
   "main": "index.js",
@@ -15,7 +15,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/chramos/react-native-skeleton-placeholder"
+    "url": "https://github.com/thevsstech/react-native-skeleton"
   },
   "author": "Henrique Ramos <chenrique.ramos12@gmail.com> (https://github.com/chramos)",
   "license": "ISC",
