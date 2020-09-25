@@ -4,6 +4,6 @@
  * @repo
  */
 
-import SkeletonPlaceholder from "./lib/SkeletonPlaceholder";
+import Skeleton from "./lib/Skeleton";
 
-export default SkeletonPlaceholder;
+export default Skeleton;
