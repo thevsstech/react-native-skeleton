@@ -25,6 +25,7 @@ interface SkeletonProps {
     speed?: number;
 }
 
+
 export default function Skeleton({
                                      children,
                                      backgroundColor,
@@ -32,6 +33,7 @@ export default function Skeleton({
                                      highlightColor
                                  }: SkeletonProps): JSX.Element {
     const animatedValue = React.useRef(new Animated.Value(0)).current;
+
 
     React.useEffect(() => {
         Animated.loop(
@@ -49,7 +51,6 @@ export default function Skeleton({
         outputRange: [-350, 350]
     });
 
-
     const absoluteTranslateStyle = React.useMemo(() => (
         {...StyleSheet.absoluteFillObject, transform: [{translateX}]}
     ), [translateX]);
@@ -66,10 +67,11 @@ export default function Skeleton({
     ), [backgroundColor]);
 
 
+
     const getChildren = React.useCallback((element: JSX.Element | JSX.Element[]) => {
         return React.Children.map(element, (child: JSX.Element, index: number) => {
             let style;
-            if (child.type.displayName === "SkeletonItem") {
+            if (child && child.type && child.type.displayName === "SkeletonItem") {
                 const {children, ...styles} = child.props;
                 style = styles;
             } else {
