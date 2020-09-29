@@ -79,9 +79,9 @@ export default function Skeleton({
                 const {children, ...styles} = child.props;
                 style = styles;
             } else {
-                style = child.props.style;
+                style = child.props?.style || {};
             }
-            if (child.props.children) {
+            if (child.props?.children) {
                 return (
                     <View key={index} style={style}>
                         {getChildren(child.props.children)}
