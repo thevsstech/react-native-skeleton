@@ -70,14 +70,19 @@ export default function Skeleton({
 
     const getChildren = React.useCallback((element: JSX.Element | JSX.Element[]) => {
         return React.Children.map(element, (child: JSX.Element, index: number) => {
-            let style;
-            if (child && child.type && child.type.displayName === "SkeletonItem") {
+            if (!child) {
+                return null
+            }
+
+            let style = {}
+            if ( child.type && child.type.displayName === "SkeletonItem") {
                 const {children, ...styles} = child.props;
                 style = styles;
-            } else {
-                style = child.props.style;
+            } else  if (child.props && child.props.style){
+                style =child.props.style
             }
-            if (child.props.children) {
+
+            if (child.props && child.props.children) {
                 return (
                     <View key={index} style={style}>
                         {getChildren(child.props.children)}
