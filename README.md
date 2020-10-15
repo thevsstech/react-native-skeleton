@@ -1,6 +1,6 @@
-## SkeletonPlaceholder
+## Skeleton
 
-SkeletonPlaceholder is a React Native library to easily create an amazing loading effect. [ANDROID & IOS]
+Skeleton is a React Native library to easily create an amazing loading effect. [ANDROID & IOS]
 
 ![](https://i.imgur.com/3aDeSTZ.gif)
 
@@ -16,13 +16,13 @@ SkeletonPlaceholder is a React Native library to easily create an amazing loadin
 Using yarn:
 
 ```bash
-yarn add react-native-linear-gradient
+yarn add @thevsstech/react-native-skeleton
 ```
 
 Using npm:
 
 ```bash
-npm install  react-native-linear-gradient --save
+npm install @thevsstech/react-native-skeleton --save
 ```
 
 If you are running a **react-native** version below 0.60:
@@ -63,24 +63,24 @@ with **SkeletonPlacehoder.Item** 🆕
 ```javascript
 import React from "react";
 import { View } from "react-native";
-import SkeletonPlaceholder from "react-native-skeleton-placeholder";
+import Skeleton from "@thevsstech/react-native-skeleton";
 
 const App = () => {
   return (
-    <SkeletonPlaceholder>
-      <SkeletonPlaceholder.Item flexDirection="row" alignItems="center">
-        <SkeletonPlaceholder.Item width={60} height={60} borderRadius={50} />
-        <SkeletonPlaceholder.Item marginLeft={20}>
-          <SkeletonPlaceholder.Item width={120} height={20} borderRadius={4} />
-          <SkeletonPlaceholder.Item
+    <Skeleton>
+      <Skeleton.Item flexDirection="row" alignItems="center">
+        <Skeleton.Item width={60} height={60} borderRadius={50} />
+        <Skeleton.Item marginLeft={20}>
+          <Skeleton.Item width={120} height={20} borderRadius={4} />
+          <Skeleton.Item
             marginTop={6}
             width={80}
             height={20}
             borderRadius={4}
           />
-        </SkeletonPlaceholder.Item>
-      </SkeletonPlaceholder.Item>
-    </SkeletonPlaceholder>
+        </Skeleton.Item>
+      </Skeleton.Item>
+    </Skeleton>
   );
 };
 ```
@@ -90,11 +90,11 @@ or with **View**
 ```javascript
 import React from "react";
 import { View } from "react-native";
-import SkeletonPlaceholder from "react-native-skeleton-placeholder";
+import Skeleton from "@thevsstech/react-native-skeleton";
 
 const App = () => {
   return (
-    <SkeletonPlaceholder>
+    <Skeleton>
       <View style={{ flexDirection: "row", alignItems: "center" }}>
         <View style={{ width: 60, height: 60, borderRadius: 50 }} />
         <View style={{ marginLeft: 20 }}>
@@ -104,14 +104,14 @@ const App = () => {
           />
         </View>
       </View>
-    </SkeletonPlaceholder>
+    </Skeleton>
   );
 };
 ```
 
 ### Properties
 
-#### SkeletonPlaceholder
+#### Skeleton
 
 |      Prop       |                  Description                   |  Type  |  Default  |
 | :-------------: | :--------------------------------------------: | :----: | :-------: |
@@ -119,7 +119,7 @@ const App = () => {
 | highlightColor  | Determines the highlight color of placeholder  | string | _#F2F8FC_ |
 |      speed      | Determines the animation speed in milliseconds | number |   _800_   |
 
-#### SkeletonPlaceholder.Item
+#### Skeleton.Item
 
 | Prop |            Description            | Type | Default |
 | :--: | :-------------------------------: | :--: | :-----: |
