@@ -16,13 +16,13 @@ Skeleton is a React Native library to easily create an amazing loading effect. [
 Using yarn:
 
 ```bash
-yarn add @thevsstech/react-native-skeleton
+yarn add react-native-linear-gradient
 ```
 
 Using npm:
 
 ```bash
-npm install @thevsstech/react-native-skeleton --save
+npm install react-native-linear-gradient --save
 ```
 
 If you are running a **react-native** version below 0.60:
@@ -45,14 +45,15 @@ pod install
 Using yarn:
 
 ```bash
-yarn add react-native-skeleton-placeholder
+yarn add @thevsstech/react-native-skeleton
 ```
 
 Using npm:
 
 ```bash
-npm install react-native-skeleton-placeholder --save
+npm install @thevsstech/react-native-skeleton --save
 ```
+
 
 ### Usage
 
